@@ -4,7 +4,7 @@ Last version of Venom's VAPI corresponds roughly to libtoxcore [at this point](h
 
 ## Running the sample:
 ```bash
-git clone https://github.com/ValaTox/tox-vapi.git && cd tox-vapi
+git clone https://github.com/ValaTox/tox-vapi-tests.git && cd tox-vapi
 sudo chmod +x build.sh # run as root -- chmod (+x) the build.sh file.
 ./build.sh # Run the compilation.
 ```
