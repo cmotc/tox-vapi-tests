@@ -1,10 +1,11 @@
 #!/bin/sh
 valac \
---vapidir=./src/ \
+--vapidir=./vapi \
+-o ./bin/VAPI-Test \
 --pkg toxcore \
-./tests/vapi-test.vala \
+./Main.vala \
 -X -I. \
 --verbose
 
-chmod +x ./tests/Vapi-Test
-./tests/Vapi-Test
+chmod +x ./bin/VAPI-Test
+./bin/VAPI-Test
