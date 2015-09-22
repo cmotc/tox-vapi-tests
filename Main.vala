@@ -2,7 +2,8 @@ using ToxCore;
 
 namespace vapitest {
   public class App : GLib.Object {
-    private Tox handle;
+    private ToxCore.Tox? handle;
+    private ToxCore.Options? options;
 
     private string USER_NAME;
     private string USER_MOOD;
@@ -21,13 +22,21 @@ namespace vapitest {
         "E398A69646B8CEACA9F0B84F553726C1C49270558C57DF5F3C368F05A7D71354"
       );
 
+      try {
+        this.options = Options.create ();
+      } catch (ToxCore.OptionError error) {
+        GLib.error(error.message);
+      }
+
+      assert(options != null);
+
       // Init the Tox handle:
-      //this.handle = Tox.create (null, null);
+      this.handle = Tox.create (options);
     }
 
     // Run the test app.
     private void run () {
-      //this.init_tox_stuff ();
+      this.init_tox_stuff ();
     }
 
     // Init our Tox related stuff.
