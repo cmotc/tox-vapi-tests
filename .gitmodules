@@ -1,0 +1,3 @@
+[submodule "tox-vapi"]
+	path = vapi
+	url = https://github.com/ValaTox/tox-vapi
